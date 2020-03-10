@@ -22,7 +22,7 @@ var Userdet = require("./models/userdet");
 var Userloc = require("./models/userloc");
 
 app.use(require("express-session")({
-	secret:"Apurva is the best",
+	secret:"Your secret is safe",
 	resave:false,
 	saveUninitialized:false
 }));
