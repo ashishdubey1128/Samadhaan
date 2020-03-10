@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+<style type="text/css">
+		.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.danger {
+  border-color: #f44336;
+  color: red
+}
+
+.danger:hover {
+  background: #f44336;
+  color: white;
+}
+.btn {
+  border-radius: 5px;
+}
+html,body{
+height: 100%;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+	</style>
+	
+</head>
+<body data-spy="scroll" data-target=".main" data-offset="50">
+  <div style="background-image: url(https://images.unsplash.com/photo-1499848144902-af767f6d0c7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80);background-size: cover;background-repeat: no-repeat;height: 100%;" id="m">
+        <div class="container main" style="padding-top: 150px;padding-bottom: 100px;">
+          <div class="jumbotron" style="text-align: center;border-radius: 30px;margin-right: 10%;margin-left: 10%;background-color: #070707;background-color: rgba(0,0,0,0.5);">
+          <h1 style="color: white;">Welcome to the app!!!!</h1>
+          <a href="#register"><button class="button"><span>Register your Complain</span></button></a>
+          <br>
+          <a href="#view"><button class="button"><span>View your Queries</span></button></a>
+          <br>
+          <a href="/logout"><button class="btn danger">Logout</button></a>
+          </div>
+        </div>
+  </div>
+
+
+
+
+
+  <div id="register" class="slide" style="background-image: url(https://images.unsplash.com/photo-1475332340095-a12d7b5a7fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);/*background-color: #edc755*/background-repeat: no-repeat;background-size: cover;">
+    <div class="container" style="padding-top: 200px;padding-bottom: 300px;">
+      <div style="text-align: center;">
+        <form name="form1" method="post" action="/<%=id%>/query">
+        <input style="width: 70%;height: 50px;border-radius: 10px;opacity: 0.9;" type="text" name="query" placeholder="Enter Query"><br><br>
+        <button class="btn btn-md btn-primary" onclick="a()">Register</button>
+        </form> 
+  </div> 
+  <div class="well well-md" style="margin-top: 8%; text-align: center; margin-right: 25%;margin-left: 25%;background-color: rgba(188, 188, 188,0.5);border-radius: 20px;">
+    <h3>Frequently Asked Questions</h3><hr>
+    <marquee behaviour="scroll" direction="up" height=150px width=60% scrolldelay="300" onmouseover="this.stop();" onmouseout="this.start();" style="margin-top: 25px;color: white;">
+    <li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">Name of insecticides banned ?</span><br>
+<span>- BHC 10%, DDT & Phosphomidan</span></li>
+<li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">The type of insects/pest ?</span><br>
+<span>- Borer, leaf feeder, sucking pest and non insect pest</span></li>
+<li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">What is Bt plant ?</span><br>
+<span>- Bt genus extracted from soil inoculated into the plant system by genetic engineering for resistance towards Lepidoptera insects.</span></li>
+<li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">What is pesticide ?</span><br>
+<span>- A chemical which kills the pests by its chemical reaction</span></li>
+<li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">Control of white grub in maize ?</span><br>
+<span>- Soil application of neem cake @ 25Kg/ha or phorate 10 G @ 20 kg/ha at the time of sowing</span></li>
+<li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">Any hybrid variety available in Mulberry ?</span><br>
+<span>- Yes,   V-1 hybrid</span></li>
+<li><span style="font-family: 'baloo',cursive;font-size: 20px;color: black;opacity: 1;">Name of blast resistant varieties in Paddy ?</span> <br>
+<span>- ADT-36, 38,39 and 42</span></li>
+    </marquee>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<div id="view" class="slide" style="/*background-color: #c9ffe1;*/ background-repeat: no-repeat;background-size: cover;">
+  <div class="container" style="padding-top: 100px;padding-bottom: 25px;text-align: center;">
+  	<div class="jumbotron" style="margin-left: 15%;margin-right: 15%;border-radius: 30px;background-color: rgba(0,0,0,0.9);"><h1 style="color: white;">All Queries</h1></div>
+  	<div class="well-md" style="background-color: rgba(124, 170, 145,0.9);text-align: center;margin-left: 15%;margin-right: 15%;border-radius: 10px;">
+      <table class="table table-hover" style="color: white;">
+        <th>QUERY POSTED ON</th><th>QUERY</th><th>SOLUTION</th><th>SOLUTION POSTED ON</th>
+        <%query.forEach(function(query){%>
+        <tr>
+          <td>
+            <%=query.date%>
+          </td>
+          <td>
+            <%=query.query%>
+          </td>
+          <td>
+            <%=query.solution%>
+          </td>
+          <td>
+            <%=query.dates%>
+          </td>
+        </tr>
+        <%});%>
+      </table>
+<!--   			<marquee behaviour="scroll" direction="up" scrolldelay=300 height=150px width=60% onmouseover="this.stop();" onmouseout="this.start();" style="margin-top: 25px;color: white;">
+  			<%query.forEach(function(query){%>
+			<li style="font-family: 'baloo',cursive;font-size: 20px;"><%=query.date%> &nbsp;- &nbsp;<%=query.query%> &nbsp;- &nbsp;<%=query.solution%>&nbsp;-&nbsp;<%=query.dates%></li>
+			<%});%>
+			</marquee> -->
+			
+  	</div>
+  	<br>
+  	<br>
+  	<a href="/<%=id%>/removequery"><button class="btn btn-md btn-primary">Delete First Query</button></a>
+  </div>
+  <a href="#m" class="btn btn-primary btn-sm" style="float: right;">Top</a>
+</div>
+
+
+
+
+
+
+<script>
+  function a() {
+    if(form1.query.value==="")
+    {
+      alert("Enter valid Query");
+    }
+    else
+      alert("Query Register!");
+  }
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".main a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<script>
+
+var div = document.getElementById('view');
+
+div.style.height = '100%';
+document.body.appendChild(div);
+div.addEventListener('mousemove', function(event) {
+
+var x = event.clientX;
+var y = event.clientY;
+
+div.style.backgroundColor = 'rgb('+ x +', '+y+', +100)';
+} )
+</script>
+</body>
+</html>

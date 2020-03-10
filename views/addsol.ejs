@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<script type="text/javascript">
+  		function a() {
+  			if(form1.sol.value==="")
+  			{
+  				alert("Invalid Solution !!");
+  			}
+  			else
+  				alert("Solution Added!");
+  		}
+  	</script>
+</head>
+<body style="background-color: rgba(247, 226, 91,0.7);">
+	<div class="container" id="x">
+		<div  class="jumbotron" style="background-color: rgba(0,0,0,0.6);margin-top: 20%;text-align: center;">
+			<form method="post" action="/<%=id%>/<%=uid%>/<%=query%>/solution" name="form1">
+			<input style="width: 70%;height: 50px;border-radius: 10px;opacity: 0.9;" type="text" name="sol" placeholder="Enter Solution"><br><br>
+			<button class="btn btn-lg btn-warning" onclick="a()">Submit</button>
+		</form>
+		</div>
+</div>
+
+</body>
+</html>

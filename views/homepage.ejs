@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homepage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mukta:800" rel="stylesheet">
+	
+
+
+	<script type='text/javascript'>
+	var imageID=0;
+	function changeimage(every_seconds){
+    if(!imageID){
+        document.body.style.backgroundImage="url('https://images.unsplash.com/photo-1533062618053-d51e617307ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')";
+        imageID++;
+    }
+    else{if(imageID==1){
+        document.body.style.backgroundImage="url('https://images.unsplash.com/photo-1500282467676-780ee66f8992?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1034&q=80')";
+        imageID++;
+    }else{if(imageID==2){
+        document.body.style.backgroundImage="url('https://images.unsplash.com/photo-1535048637252-3a8c40fa2172?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80')";
+        imageID=0;
+    }}}
+    setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
+}
+
+
+</script>
+
+
+<style type="text/css">
+	body, html {
+  height: 100%;
+}
+#su:hover{
+	background-color: rgba(0, 0, 0,0.5);
+}
+#ln:hover{
+	background-color: rgba(0, 0, 0,0.5);
+}
+
+</style>
+
+</head>
+<body style='background-image:url(https://images.unsplash.com/photo-1535048637252-3a8c40fa2172?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80);background-repeat: no-repeat;background-size: cover;background-position: center;height: 100%;' onload='changeimage(4)'>
+<div style="width: 100%; overflow: hidden;height: 100%;">
+    <div style="width: 50%; float: left; height: 100%;border-right: 0.2px solid white;background-color: rgba(10, 10, 10,0.2);text-align: center;">
+    	<div style="height: 100%">
+        	<img src="/images/samadhantextbox.png" height="90%" width="90%">
+    	</div>
+    </div>
+    <div style="float:right;width:50%;height: 100%;border-top: 0.2px solid white;background-color: rgba(10, 10, 10,0.4)"> 
+    	<div style="height: 50%;width: 100%;border-bottom: 0.2px solid white;">
+    		<a href="/signup"><div style="width: 50%;float: left;height: 100%;border-right: 0.2px solid white;text-align: center;" id="su"><img src="/images/signup.png" height="20%" width="20%" style="margin-top: 30%;"><h2 style="color: white;">Signup</h2></div></a>
+
+
+    		<a href="/login"><div id="ln" style="width: 50%;float: right;height: 100%;border-bottom: 0.2px solid white;text-align: center;"><img src="/images/login1.png" height="20%" width="20%" style="margin-top: 30%;"><h2 style="color: white;">Login</h2></div>
+    	</div></a>
+
+
+    	<div style="height: 50%;width: 100%;text-align: center;background-color: rgba(0,0,0,0.6);"><h2 style="color: white">ABOUT</h2>
+    	<p style="color: white;margin-top: 5%;">This App is a helpline app for the Farmers of Rural India, whoa re the backbone of the Indian Economy. The farmer scans his Aadhar QR code to signup into the website. As he scans his ID, his location is saved into the DB. Now the user can enter the queries he has regarding farming and gets a reply from the Government of India directly. The user has an option to view the status of his queries and see the solution on his login at times needed.</p>
+    	</div>
+    </div>
+</div>
+
+</body>
+</html>
